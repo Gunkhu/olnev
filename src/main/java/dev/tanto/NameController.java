@@ -35,11 +35,19 @@ public class NameController {
     void onClickSearchButton(ActionEvent event) {
         System.out.println(App.nameDictList.get(0).getHuName());
         String searchName = huNameField.getText();
-        for(NameDict nameDict : App.nameDictList){
-            if(searchName.equals(nameDict.getHuName())){
+        for (NameDict nameDict : App.nameDictList) {
+        if (searchName.equals(nameDict.getHuName())) {
+            if (nameDict.getItName().equals("-")) {
+                itNameField.setText("ez minusz");
+            } else {
                 itNameField.setText(nameDict.getItName());
             }
+            return;
         }
+        itNameField.setText("Nincs ilyen név");
     }
 
+    }
 }
+
+
