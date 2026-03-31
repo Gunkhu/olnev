@@ -10,6 +10,11 @@ public class MainController {
         System.out.println("névjegy....");
         App.setRoot("aboutScene");
     }
+    
+    @FXML
+    void onClickExitButton(ActionEvent event) {
+
+    }
 
     @FXML
     void onClickSearchButton(ActionEvent event) {

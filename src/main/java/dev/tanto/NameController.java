@@ -35,11 +35,9 @@ public class NameController {
     void onClickSearchButton(ActionEvent event) {
         System.out.println(App.nameDictList.get(0).getHuName());
         String searchName = huNameField.getText();
-        for(NameDict nameDict :App.nameDictList){
+        for(NameDict nameDict : App.nameDictList){
             if(searchName.equals(nameDict.getHuName())){
                 itNameField.setText(nameDict.getItName());
-            }else{
-                itNameField.setText("Rossz infó!");
             }
         }
     }
